@@ -1,7 +1,117 @@
-/* some colors you may find useful:
+/* Some colors you may find useful:
   #115ff4
   #060ce9
   #28a200
   #8d2ab5
   #74119c
 */
+
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+}
+
+/* -------- Restart Button Styling -------- */
+#restart {
+  background-color: #115ff4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+#restart:hover {
+  background-color: #060ce9;
+}
+
+/* -------- Jeopardy Table Styling -------- */
+#jeopardy {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 900px;
+}
+
+#jeopardy th {
+  background-color: #8d2ab5;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  border: 2px solid #74119c;
+}
+
+#jeopardy td {
+  background-color: #115ff4;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px;
+  border: 2px solid #060ce9;
+  cursor: pointer;
+}
+
+#jeopardy td:hover {
+  background-color: #28a200;
+}
+
+/* Highlight rows for better visibility */
+#jeopardy tr:nth-child(even) td {
+  background-color: #74119c;
+}
+
+#jeopardy td[data-category][data-clue] {
+  background-color: #115ff4; /* Reset clue cells */
+  color: white;
+  font-weight: bold;
+}
+
+#jeopardy td[data-category][data-clue]:hover {
+  background-color: #8d2ab5; /* Highlight on hover */
+}
+
+/* -------- Loading Spinner Styling -------- */
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #115ff4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-top: 20px;
+}
+
+#loading span {
+  visibility: hidden; /* Hide the text while spinner is active */
+}
+
+/* Animation for the spinning effect */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------- Responsive Design -------- */
+@media (max-width: 768px) {
+  #jeopardy {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #restart {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
