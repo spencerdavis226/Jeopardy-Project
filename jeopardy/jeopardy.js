@@ -240,3 +240,5 @@ document.addEventListener('DOMContentLoaded', function () {
   // Safely add the event listener to the restart button
   restartButton.addEventListener('click', setupAndStart); // Trigger game setup on click
 });
+
+// This is a small change to trigger the pull request
